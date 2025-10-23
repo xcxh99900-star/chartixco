@@ -4,8 +4,8 @@ const isProd = process.env.NODE_ENV === 'production'
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: isProd ? '/chartix-v2.0' : '',
-  assetPrefix: isProd ? '/chartix-v2.0/' : '',
+  basePath: isProd ? '/chartixco' : '',
+  assetPrefix: isProd ? '/chartixco/' : '',
   images: { 
     unoptimized: true 
   },
