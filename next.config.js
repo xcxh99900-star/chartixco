@@ -1,19 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Required for static export
-  basePath: '/chartixco', // Match your repo name
-  assetPrefix: '/chartixco/', // For proper asset loading
+  output: 'export',  // CRITICAL: Enables static export
+  basePath: '/chartixco',  // Your repo name
+  assetPrefix: '/chartixco',  // Ensures assets load correctly
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: false,
   },
-  images: { 
-    unoptimized: true // Already correct for static export
-  },
+  images: { unoptimized: true },
   typescript: {
     ignoreBuildErrors: false,
   },
   swcMinify: true,
   reactStrictMode: true,
 };
-
 module.exports = nextConfig;
