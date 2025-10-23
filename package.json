@@ -1,10 +1,14 @@
 {
+  "homepage":"https://zerotoalpha1.github.io/chartixco",
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+     "predeploy": "npm run build",
+    "deploy": "gh-pages -d out",
+    "build": "next build && next export",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
@@ -69,5 +73,8 @@
     "typescript": "5.2.2",
     "vaul": "^0.9.9",
     "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
