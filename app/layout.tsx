@@ -29,10 +29,9 @@ export default function RootLayout({
           type="module"
           src="https://unpkg.com/@splinetool/viewer@1.10.83/build/spline-viewer.js"
           async
-          suppressHydrationWarning
         />
       </head>
-      <body className={`${inter.className} bg-white text-[var(--text-1)]`} suppressHydrationWarning>
+      <body className={inter.className}>
         <div className="w-full bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs px-4 py-2 text-center sticky top-0 z-50">
           Trading involves risk. Past results do not guarantee future returns. Trade responsibly.
         </div>
