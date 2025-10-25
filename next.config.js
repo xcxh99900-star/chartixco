@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  output: 'export',  // CRITICAL: Enables static export
-  basePath: '/chartixco',  // Your repo name
-  assetPrefix: '/chartixco',  // Ensures assets load correctly
+  output: 'export',
+  basePath: isProd ? '/chartixco' : '',
+  assetPrefix: isProd ? '/chartixco' : '',
   trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: false,
